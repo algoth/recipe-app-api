@@ -4,6 +4,7 @@ from .models import User
 from django.utils.translation import gettext as _
 # Register your models here.
 
+
 class UserAdmin(BaseUserAdmin):
     ordering = ['id']
     list_display = ['email', 'name']
@@ -46,5 +47,6 @@ class UserAdmin(BaseUserAdmin):
             )
         }),
     )
+
 
 admin.site.register(User, UserAdmin)
